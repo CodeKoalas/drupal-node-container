@@ -1,5 +1,9 @@
 FROM drupal:fpm-alpine
 
+# Install Composer
+RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer \
+&& ln -s /usr/local/bin/composer /usr/bin/composer
+
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
