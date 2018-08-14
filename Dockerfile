@@ -9,6 +9,7 @@ RUN apt-get update \
     libxml2-dev \
     gnupg2 \
     dirmngr \
+    git \
  && apt-get clean \
 && rm -r /var/lib/apt/lists/*
 
