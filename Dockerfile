@@ -82,3 +82,5 @@ RUN apk add --no-cache \
     libxml2-dev
 
 RUN docker-php-ext-install mbstring pdo pdo_mysql soap
+
+RUN composer global require hirak/prestissimo
