@@ -5,7 +5,7 @@ FROM drupal:fpm-alpine
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer \
 && ln -s /usr/local/bin/composer /usr/bin/composer
 
-ENV NODE_VERSION 9.11.1
+ENV NODE_VERSION 10.15.0
 
 RUN addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
